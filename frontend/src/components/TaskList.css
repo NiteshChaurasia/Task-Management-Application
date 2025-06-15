@@ -1,0 +1,47 @@
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem 0;
+  }
+  
+  .task-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .task-actions button {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1.5px solid #ccc;
+    cursor: pointer;
+    background-color: white;
+  }
+  
+  .task-actions .editTask {
+    color: #111827;
+    border-color: #cbd5e1;
+  }
+  
+  .task-actions .delete {
+    color: #dc2626;
+    border-color: #fecaca;
+  }
+  
+  .task-actions .delete:hover {
+    background-color: #fee2e2;
+  }
+  
+  .task-actions .editTask:hover {
+    background-color: #f1f5f9;
+  }
+  
