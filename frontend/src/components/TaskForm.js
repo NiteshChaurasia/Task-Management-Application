@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './TaskForm.css';
 
+const API_BASE = 'https://task-management-application-yurc.onrender.com/';
+
 const TaskForm = ({ onTaskAdded, editingTask, onUpdateTask, clearEditing }) => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -20,14 +22,14 @@ const TaskForm = ({ onTaskAdded, editingTask, onUpdateTask, clearEditing }) => {
     if (!name.trim()) return;
 
     if (editingTask) {
-      await fetch(`http://localhost:5000/tasks/${editingTask.id}`, {
+      await fetch(`${API_BASE}/tasks/${editingTask.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, description }),
       });
       onUpdateTask();
     } else {
-      await fetch('http://localhost:5000/tasks', {
+      await fetch(`${API_BASE}/tasks`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, description }),
