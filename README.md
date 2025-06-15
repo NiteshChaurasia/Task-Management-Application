@@ -1,8 +1,3 @@
-Here's a well-structured `README.md` file content for your **Task Management Application** that includes project overview, features, tech stack, setup instructions, and deployment info:
-
----
-
-```markdown
 # 📝 Task Management Application
 
 A simple and intuitive task management app built with **React (frontend)** and **Node.js/Express (backend)**. The app allows users to add, edit, and delete tasks — all with a clean and responsive user interface.
