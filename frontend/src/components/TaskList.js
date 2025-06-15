@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './TaskList.css';
 
+const API_BASE = 'https://task-management-application-yurc.onrender.com/'; 
+
 const TaskList = ({ onEdit, refreshTrigger }) => {
   const [tasks, setTasks] = useState([]);
 
   const fetchTasks = async () => {
     try {
-      const res = await fetch('http://localhost:5000/tasks');
+      const res = await fetch(`${API_BASE}/tasks`);
       const data = await res.json();
       setTasks(data);
     } catch (error) {
@@ -16,7 +18,7 @@ const TaskList = ({ onEdit, refreshTrigger }) => {
 
   const deleteTask = async (id) => {
     try {
-      await fetch(`http://localhost:5000/tasks/${id}`, {
+      await fetch(`${API_BASE}/tasks/${id}`, {
         method: 'DELETE',
       });
       fetchTasks(); // Reload tasks after deletion
