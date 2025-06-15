@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './TaskForm.css';
 
-const API_BASE = 'https://task-management-application-yurc.onrender.com/';
+const API_BASE = 'https://task-management-application-yurc.onrender.com';
 
 const TaskForm = ({ onTaskAdded, editingTask, onUpdateTask, clearEditing }) => {
   const [name, setName] = useState('');
