@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './TaskList.css';
 
-const API_BASE = 'https://task-management-application-yurc.onrender.com/'; 
+const API_BASE = 'https://task-management-application-yurc.onrender.com'; 
 
 const TaskList = ({ onEdit, refreshTrigger }) => {
   const [tasks, setTasks] = useState([]);
